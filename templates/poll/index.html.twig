@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PollController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello  ✅</h1>
+<table border="1">
+    <tr>
+        <th>title</th>
+        <th>createdAt</th>
+    </tr>
+    {% for poll in polls %}
+        <tr>
+            <td>{{ poll.title }}</td>
+            <td>{{ poll.createdAt|date("m/d/Y") }}</td>
+        </tr>
+    {% endfor %}
+    </ul>
+</table>
+</div>
+{% endblock %}
